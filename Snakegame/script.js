@@ -2,7 +2,7 @@
 let canvas = document.getElementById("snake");
 let context = canvas.getContext("2d");
 let box = 32;
-let snake = [];  //p   ;  : 
+let snake = [];  //p   ;  : -
 snake[0] = {
     x: 8*box,
     y: 8*box
