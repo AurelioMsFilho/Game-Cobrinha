@@ -28,11 +28,22 @@ function iniciarJogo(){
     criarBG();
     criarCobrinha();
 
-    let snakex = snake[0].x;
-    let snakey = snake[0].y;
+    let snakeX = snake[0].x;
+    let snakeY = snake[0].y;
 
-    if(direction == "right") snakex += box;
-    if(direction == "left") snakex -= box;
+    if(direction == "right") snakeX += box;
+    if(direction == "left") snakeX -= box;
+    if(direction == "up") snakeY -= box;
+    if(direction == "donw") snakeY += box;
+
+    snake.pop();
+
+    let newHead = {
+        x: snakeX,
+        y: snakeY
+    }
+    snake.unshift(newHead);
+    
 }
 
 let jogo = setInterval(iniciarJogo, 100);
