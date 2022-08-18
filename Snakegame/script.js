@@ -7,6 +7,7 @@ snake[0] = {
     x: 8*box,
     y: 8*box
 }
+let direction = "right";
 
 function criarBG (){
     context.fillStyle= "lightblue";
@@ -23,6 +24,13 @@ function criarCobrinha(){
 
 
 }
+function iniciarJogo(){
+    criarBG();
+    criarCobrinha();
 
-criarBG();
-criarCobrinha();
+    let snakex = snake[0].x;
+    let snakey = snake[0].y;
+}
+
+let jogo = setInterval(iniciarJogo, 100);
+
